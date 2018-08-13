@@ -21,5 +21,9 @@
   "bugs": {
     "url": "https://github.com/AdrianaEsvereidyTV/Proyecto-5--Easy-Visit/issues"
   },
-  "homepage": "https://github.com/AdrianaEsvereidyTV/Proyecto-5--Easy-Visit#readme"
+  "homepage": "https://github.com/AdrianaEsvereidyTV/Proyecto-5--Easy-Visit#readme",
+  "dependencies": {
+    "nodemailer": "^4.6.7",
+    "xoauth2": "^1.2.0"
+  }
 }
