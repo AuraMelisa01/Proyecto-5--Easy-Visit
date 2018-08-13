@@ -4,13 +4,13 @@ btnRegistrar.addEventListener('click', e => {
   let personVisit = document.getElementById('personVisit').value;
   let company = document.getElementById('company').value;
 
-  if (name === ''){
+  if (name === '') {
     alert('Ingresa el nombre completo');
     return false;
-  } if (email === ''){
+  } if (email === '') {
     alert('Ingresa el correo electrónico');
     return false;
-  } if (personVisit === ''){
+  } if (personVisit === '') {
     alert('Ingresa tu anfitrion');
     return false;
   } if (company === '') {
@@ -18,22 +18,20 @@ btnRegistrar.addEventListener('click', e => {
     return false;
   } else {
     db.collection('visitors').add({
-        createdAt: firebase.firestore.FieldValue.serverTimestamp(),
-        name: name,
-        mail: email,
-        personVisit: personVisit,
-        company: company
-      })
-      .then(function (docRef) {
+      createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+      name: name,
+      mail: email,
+      personVisit: personVisit,
+      company: company
+    })
+      .then(function(docRef) {
         console.log('Document written with ID: ', docRef.id);
         document.getElementById('name').value = '';
         document.getElementById('email').value = '';
         document.getElementById('personVisit').value = '';
         document.getElementById('company').value = '';
-
       })
-      .catch(function (error) {
-
+      .catch(function(error) {
         console.error('Error adding document: ', error);
       });
   }
