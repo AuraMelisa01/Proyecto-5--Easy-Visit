@@ -5,9 +5,15 @@ btnRegistrar.addEventListener('click', e => {
     let personVisit = document.getElementById('personVisit').value;
     let company = document.getElementById('company').value;
 
-    if (name === '' || email === '' || personVisit === '' || company === '') {
-        alert("Ingresa los datos Gracias")
-    } else {
+    // if (name === ''){
+    //     alert("Ingresa tu nombre");
+    // } if (email === ''){
+    //     alert("Ingresa tu correo");
+    // } if (personVisit === ''){
+    //     alert("Ingresa el nombre de la persona que visitas");
+    // } if (company === ''){
+    //     alert("Ingresa la compañia");
+    // } else {
         db.collection("visitors").add({
             createdAt: firebase.firestore.FieldValue.serverTimestamp(),
             name: name,
@@ -26,7 +32,7 @@ btnRegistrar.addEventListener('click', e => {
             .catch(function (error) {
                 console.error("Error adding document: ", error);
             });
-    }
+    // }
 });
 
 
